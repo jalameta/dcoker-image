@@ -1,0 +1,7 @@
+php7.2-cli:
+  type: build
+  before_script: 
+    - docker login -u $CI_DEPLOY_USER -p $CI_DEPLOY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t jalameta/php-cli:7.2 7.2/cli/
+    - docker push registry.lab.jalameta.co.id/images/php:7.2
