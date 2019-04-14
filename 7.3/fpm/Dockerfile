@@ -7,7 +7,20 @@ FROM phpdockerio/php73-cli
 # Install FPM
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
-    && apt-get -y --no-install-recommends install php7.3-fpm \
+    && apt-get -y --no-install-recommends install php7.3-fpm php-apcu \
+        php-apcu-bc \
+        php7.3-cli \
+        php7.3-curl \
+        php7.3-json \
+        php7.3-mbstring \
+        php7.3-opcache \
+        php7.3-readline \
+        php7.3-xml \
+        php7.3-zip \
+        php7.3-bcmath \
+        php7.3-mysql \
+        php7.3-redis \
+        php7.3-gd \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
