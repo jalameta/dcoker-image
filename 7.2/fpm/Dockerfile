@@ -2,14 +2,12 @@
 # PHPDocker.io PHP 7.2 / FPM image #
 ####################################
 
-FROM phpdockerio/php72-cli
+FROM registry.lab.jalameta.co.id/images/php/cli:7.2
 
 # Install FPM
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
-    && apt-get -y --no-install-recommends install php7.2-fpm php7.2-curl php-apcu php-apcu-bc \
-        php7.2-bcmath php7.2-mysql php7.2-redis php7.2-gd \
-        php7.2-json php7.2-mbstring php7.2-opcache php7.2-readline php7.2-xml php7.2-zip \
+    && apt-get -y --no-install-recommends install php7.2-fpm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 

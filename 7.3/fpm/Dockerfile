@@ -2,25 +2,12 @@
 # PHPDocker.io PHP 7.3 / FPM image #
 ####################################
 
-FROM phpdockerio/php73-cli
+FROM registry.lab.jalameta.co.id/images/php/cli:7.3
 
 # Install FPM
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
-    && apt-get -y --no-install-recommends install php7.3-fpm php-apcu \
-        php-apcu-bc \
-        php7.3-cli \
-        php7.3-curl \
-        php7.3-json \
-        php7.3-mbstring \
-        php7.3-opcache \
-        php7.3-readline \
-        php7.3-xml \
-        php7.3-zip \
-        php7.3-bcmath \
-        php7.3-mysql \
-        php7.3-redis \
-        php7.3-gd \
+    && apt-get -y --no-install-recommends install php7.3-fpm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
