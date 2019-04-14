@@ -10,3 +10,7 @@ build:
     - docker push registry.lab.jalameta.co.id/images/php/cli:7.2
     - docker build -t registry.lab.jalameta.co.id/images/php/cli:7.3 7.3/cli/
     - docker push registry.lab.jalameta.co.id/images/php/cli:7.3
+    - docker build -t registry.lab.jalameta.co.id/images/php/fpm:7.2 7.2/fpm/
+    - docker push registry.lab.jalameta.co.id/images/php/fpm:7.2
+    - docker build -t registry.lab.jalameta.co.id/images/php/fpm:7.3 7.3/fpm/
+    - docker push registry.lab.jalameta.co.id/images/php/fpm:7.3
