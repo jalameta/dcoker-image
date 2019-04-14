@@ -2,7 +2,7 @@ FROM registry.lab.jalameta.co.id/images/php/fpm:7.2
 
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
-    && apt-get software-properties-common -y \
+    && apt-get install software-properties-common -y \
     && add-apt-repository -y ppa:nginx/$nginx \
     && apt-get update \
     && apt-get install nginx -y \ 
