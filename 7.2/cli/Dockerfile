@@ -17,11 +17,11 @@ RUN apt-get update \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C \
     && apt-get update \
     && apt-get update \
-    && apt-get -y --no-install-recommends install dialog apt-utils curl ca-certificates unzip \
+    && apt-get -y --no-install-recommends install dialog apt-utils curl ca-certificates unzip sqlite3 libsqlite3-dev \
         openssh-server git\
         php7.2-cli php7.2-curl php-apcu php-apcu-bc \
         php7.2-bcmath php7.2-mysql php7.2-redis php7.2-gd \
-        php7.2-json php7.2-mbstring php7.2-opcache php7.2-readline php7.2-xml php7.2-zip \
+        php7.2-json php7.2-mbstring php7.2-opcache php7.2-readline php7.2-xml php7.2-zip php7.2-sqlite3 \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require hirak/prestissimo \
     && composer clear-cache \

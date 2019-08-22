@@ -17,6 +17,8 @@ RUN apt-get update \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C \
     && apt-get update \
     && apt-get -y --no-install-recommends install \
+        sqlite3 \ 
+        libsqlite3-dev \
         dialog \
         apt-utils \
         ca-certificates \
@@ -38,6 +40,7 @@ RUN apt-get update \
         php7.3-mysql \
         php7.3-redis \
         php7.3-gd \
+        php7.3-sqlite3 \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require hirak/prestissimo \
     && composer clear-cache \
