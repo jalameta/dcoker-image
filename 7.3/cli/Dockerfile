@@ -41,6 +41,7 @@ RUN apt-get update \
         php7.3-redis \
         php7.3-gd \
         php7.3-sqlite3 \
+        php7.3-xdebug \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require hirak/prestissimo \
     && composer clear-cache \
