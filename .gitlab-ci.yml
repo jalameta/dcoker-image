@@ -33,3 +33,9 @@ php-7.4:
     - docker push registry.lab.jalameta.co.id/images/php/fpm:7.4
     - docker build -t registry.lab.jalameta.co.id/images/php/nginx:7.4 7.4/nginx/
     - docker push registry.lab.jalameta.co.id/images/php/nginx:7.4
+
+php-arch:
+  stage: build
+  script: 
+    - docker build -t registry.lab.jalameta.co.id/images/php:edge arch
+    - docker push registry.lab.jalameta.co.id/images/php:edge
