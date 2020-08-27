@@ -5,6 +5,7 @@ ENV TERM=linux
 # updating & installing packages
 RUN pacman -Syu --noconfirm \
     && pacman -S --noconfirm \
+        openssh \
         git \ 
         unzip \ 
         php \
