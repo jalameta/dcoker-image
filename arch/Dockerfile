@@ -23,7 +23,7 @@ RUN pacman -Syu --noconfirm \
         composer \
     && pacman -Scc --noconfirm
 
-ARG EXTENSIONS="bcmath bz2 curl exif gd iconv mysqli pdo_pgsql pdo_sqlite pdo_pgsql sqlite3 zip"
+ARG EXTENSIONS="bcmath bz2 curl exif gd iconv mysqli pdo_pgsql pdo_sqlite pdo_mysql sqlite3 zip"
 
 # enabling extensions
 COPY ./script /var/tmp
