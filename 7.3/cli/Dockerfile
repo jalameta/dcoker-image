@@ -43,7 +43,7 @@ RUN apt-get update \
         php7.3-sqlite3 \
         php7.3-xdebug \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && composer global require hirak/prestissimo laravel/envoy \
+    && composer global require laravel/envoy \
     && composer clear-cache \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* 

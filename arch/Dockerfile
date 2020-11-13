@@ -30,7 +30,7 @@ COPY ./script /var/tmp
 RUN chmod +x /var/tmp/enable_extension.sh && /var/tmp/enable_extension.sh
 
 # install laravel envoy
-RUN composer global require hirak/prestissimo laravel/envoy \
+RUN composer global require laravel/envoy \
     && composer clear-cache \
     && ln -s /root/.composer/vendor/laravel/envoy/bin/envoy /usr/bin/envoy
 
