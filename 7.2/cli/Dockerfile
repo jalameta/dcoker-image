@@ -2,7 +2,7 @@
 # PHPDocker.io PHP 7.2 / CLI image #
 ####################################
 
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -13,7 +13,7 @@ ENV TERM=linux
 # the distro's packages
 RUN apt-get update \
     && apt-get install -y --no-install-recommends gnupg \
-    && echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt/sources.list.d/ondrej-php.list \
+    && echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/ondrej-php.list \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C \
     && apt-get update \
     && apt-get update \
@@ -21,8 +21,8 @@ RUN apt-get update \
         openssh-server git\
         php7.2-cli \
         php7.2-curl \
-        php-apcu \
-        php-apcu-bc \
+        php7.2-apcu \
+        php7.2-apcu-bc \
         php7.2-bcmath \
         php7.2-mysql \
         php7.2-redis \
