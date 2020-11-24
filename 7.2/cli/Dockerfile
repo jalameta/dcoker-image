@@ -2,7 +2,7 @@
 # PHPDocker.io PHP 7.2 / CLI image #
 ####################################
 
-FROM ubuntu:bionic
+FROM ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 

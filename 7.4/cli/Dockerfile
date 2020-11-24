@@ -2,7 +2,7 @@
 # PHP 7.4 / CLI image              #
 ####################################
 
-FROM ubuntu:bionic
+FROM ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
