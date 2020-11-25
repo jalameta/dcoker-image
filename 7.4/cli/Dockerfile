@@ -38,6 +38,7 @@ RUN apt-get update \
         php7.4-zip \
         php7.4-bcmath \
         php7.4-mysql \
+        php7.4-pgsql \
         php7.4-redis \
         php7.4-gd \
         php7.4-sqlite3 \

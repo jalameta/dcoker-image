@@ -25,6 +25,7 @@ RUN apt-get update \
         php7.2-apcu-bc \
         php7.2-bcmath \
         php7.2-mysql \
+        php7.2-pgsql \
         php7.2-redis \
         php7.2-gd \
         php7.2-json \
