@@ -34,6 +34,16 @@ php-7.4:
     - docker build -t registry.lab.jalameta.co.id/images/php/nginx:7.4 7.4/nginx/
     - docker push registry.lab.jalameta.co.id/images/php/nginx:7.4
 
+php-8.0:
+  stage: build
+  script:
+    - docker build -t registry.lab.jalameta.co.id/images/php/cli:8.0 8.0/cli/
+    - docker push registry.lab.jalameta.co.id/images/php/cli:8.0
+    - docker build -t registry.lab.jalameta.co.id/images/php/fpm:8.0 8.0/fpm/
+    - docker push registry.lab.jalameta.co.id/images/php/fpm:8.0
+    - docker build -t registry.lab.jalameta.co.id/images/php/nginx:8.0 8.0/nginx/
+    - docker push registry.lab.jalameta.co.id/images/php/nginx:8.0
+
 php-arch:
   stage: build
   script: 
