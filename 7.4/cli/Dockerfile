@@ -42,6 +42,7 @@ RUN apt-get update \
         php7.4-redis \
         php7.4-gd \
         php7.4-sqlite3 \
+        php7.4-soap \
         php7.4-xdebug \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require laravel/envoy \

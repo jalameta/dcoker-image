@@ -39,6 +39,7 @@ RUN apt-get update \
         php8.0-redis \
         php8.0-gd \
         php8.0-sqlite3 \
+        php8.0-soap \
         php8.0-xdebug \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require --no-ansi laravel/envoy \

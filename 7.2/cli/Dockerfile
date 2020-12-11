@@ -35,6 +35,7 @@ RUN apt-get update \
         php7.2-xml \
         php7.2-zip \
         php7.2-sqlite3 \
+        php7.2-soap \
         php7.2-xdebug \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require laravel/envoy \
