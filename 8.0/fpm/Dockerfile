@@ -14,6 +14,3 @@ COPY overrides.conf /etc/php/8.0/fpm/pool.d/z-overrides.conf
 # The following startup script contains some magic to clean these up
 COPY php-fpm-startup /usr/bin/php-fpm
 CMD /usr/bin/php-fpm
-
-# Open up fcgi port
-EXPOSE 9000
